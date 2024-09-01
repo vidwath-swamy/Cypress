@@ -1,4 +1,46 @@
 import { Given, When } from "@badeball/cypress-cucumber-preprocessor"
+import Angularwebpage from "./AngularPOM"
+const AngularwebpagePOM = new Angularwebpage()
+
+When('I Enter the Name {string}',(username)=>{
+    AngularwebpagePOM.Name().type(username)
+})
+When('I Enter the Email {string}',(email)=>{
+    AngularwebpagePOM.EmailID().type(email)
+})
+When('I Enter the Password {string}',(Pass)=>{
+    AngularwebpagePOM.Password().type(Pass)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 When('I do something', function(){
