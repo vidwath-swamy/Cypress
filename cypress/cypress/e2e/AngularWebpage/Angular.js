@@ -1,16 +1,35 @@
-import { Given, When } from "@badeball/cypress-cucumber-preprocessor"
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
 import Angularwebpage from "./AngularPOM"
 const AngularwebpagePOM = new Angularwebpage()
 
-When('I Enter the Name {string}',(username)=>{
-    AngularwebpagePOM.Name().type(username)
+When('I enter the Name {string}',(username)=>{
+    AngularwebpagePOM.Name(username)
 })
-When('I Enter the Email {string}',(email)=>{
-    AngularwebpagePOM.EmailID().type(email)
+When('I enter the Email {string}',(email)=>{
+    AngularwebpagePOM.EmailID(email)
 })
-When('I Enter the Password {string}',(Pass)=>{
-    AngularwebpagePOM.Password().type(Pass)
+When('I enter the Password {string}',(password)=>{
+    AngularwebpagePOM.Password(password)
 })
+When('I enable the Checkbox',()=>{
+    AngularwebpagePOM.Checkbox()
+})
+When('I select the Gender {string}',(gender)=>{
+    AngularwebpagePOM.SelectGender(gender)
+})
+When('I select the Employment Status {string}',(Employment)=>{
+    AngularwebpagePOM.EmploymentStatus(Employment)
+})
+When('I select the Date of birth {string}',(DOB)=>{
+    AngularwebpagePOM.DateofBirth(DOB)
+})
+When('I submit the form',()=>{
+    AngularwebpagePOM.Submit()
+})
+Then('I validate the successful Submit',()=>{
+    AngularwebpagePOM.Success()
+})
+
 
 
 
