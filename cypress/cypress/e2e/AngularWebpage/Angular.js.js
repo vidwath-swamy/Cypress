@@ -1,4 +1,3 @@
-///<reference types = "Cypress"/>
 import { Given, When } from "@badeball/cypress-cucumber-preprocessor"
 
 
