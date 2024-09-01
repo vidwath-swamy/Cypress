@@ -16,9 +16,10 @@ module.exports = defineConfig({
   projectId: 'TEST',
   e2e: {
     setupNodeEvents,
-   // specPattern: '**/*.{feature,features}',
-    specPattern:'**/*.js',
+    specPattern: '**/*.{feature,features}',
+    //specPattern:'**/*.js',
     supportFile: 'cypress/support/e2e.js',
+    
     chromeWebSecurity: false,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
