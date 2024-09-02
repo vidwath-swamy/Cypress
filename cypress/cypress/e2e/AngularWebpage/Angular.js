@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
 import Angularwebpage from "./AngularPOM"
 const AngularwebpagePOM = new Angularwebpage()
+import data from "../../fixtures/AngularpageData.json"
 
 When('I enter the Name {string}',(username)=>{
     AngularwebpagePOM.Name(username)
@@ -32,7 +33,9 @@ Then('I validate the successful Submit',()=>{
 When('I navigate to the shop page',()=>{
     AngularwebpagePOM.Shop()
 })
-
+When('I select these products',()=>{
+    AngularwebpagePOM.ProductSelection(data.productnames)
+})
 
 
 

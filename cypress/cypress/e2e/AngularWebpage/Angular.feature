@@ -21,6 +21,7 @@ Feature: Sample Login
     Scenario: I validate Shop page 
     Given I visit the Angular webpage
     And I navigate to the shop page
+    And I select these products
 
 
 
