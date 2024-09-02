@@ -27,5 +27,8 @@ class Angularwebpage{
         cy.scrollTo('top')
         cy.get('.alert').should('be.visible').and('contain','Success! The Form has been submitted successfully!.')
     }
+    Shop(){
+        cy.contains('Shop').click()
+    }
 }
 export default Angularwebpage

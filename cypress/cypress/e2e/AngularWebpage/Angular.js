@@ -29,7 +29,9 @@ When('I submit the form',()=>{
 Then('I validate the successful Submit',()=>{
     AngularwebpagePOM.Success()
 })
-
+When('I navigate to the shop page',()=>{
+    AngularwebpagePOM.Shop()
+})
 
 
 

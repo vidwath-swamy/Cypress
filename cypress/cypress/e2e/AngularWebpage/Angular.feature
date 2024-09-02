@@ -11,12 +11,16 @@ Feature: Sample Login
     And I select the Date of birth "<DOB>"
     And I submit the form
     Then I validate the successful Submit
-    
     Examples:
     |username   |mailid              |Password      |SampleGender |Employment  |DOB          |
     |port       |port@abc.com        |sample1       |Female       |Student     |1996-08-08   |
     |Vidwath    |vidwath@xyz.com     |sample2       |Male         |Employed    |1992-04-14   |
 
+
+@focus
+    Scenario: I validate Shop page 
+    Given I visit the Angular webpage
+    And I navigate to the shop page
 
 
 
