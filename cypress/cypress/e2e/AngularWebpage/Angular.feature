@@ -18,11 +18,17 @@ Feature: Sample Login
 
 
 @focus
-    Scenario: I validate Shop page 
+    Scenario: Validate adding a product and checking out 
     Given I visit the Angular webpage
     And I navigate to the shop page
     And I select these products
-
+    And I navigate to the checkout page
+    And I validate the products in the cart
+    And I click on checkout
+    And I select Delivery location
+    And I agree with terms and conditions
+    And I click on purchase option
+    Then I validate the successful message
 
 
    # @regression

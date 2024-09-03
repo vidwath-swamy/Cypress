@@ -36,9 +36,27 @@ When('I navigate to the shop page',()=>{
 When('I select these products',()=>{
     AngularwebpagePOM.ProductSelection(data.productnames)
 })
-
-
-
+When('I navigate to the checkout page',()=>{
+    AngularwebpagePOM.CheckoutPage()
+})
+When('I validate the products in the cart',()=>{
+    AngularwebpagePOM.productvalidationincheckoutpage()
+})
+When('I click on checkout',()=>{
+    AngularwebpagePOM.Checkoutbutton()
+})
+When('I select Delivery location',()=>{
+    AngularwebpagePOM.Deliverylocation()
+})
+When('I agree with terms and conditions',()=>{
+    AngularwebpagePOM.TermsandConditionsCheckbox()
+})
+When('I click on purchase option',()=>{
+    AngularwebpagePOM.Purchasebutton()
+})
+Then('I validate the successful message',()=>{
+    AngularwebpagePOM.SuccessfullMessage()
+})
 
 
 

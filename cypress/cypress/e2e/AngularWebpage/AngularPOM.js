@@ -40,5 +40,29 @@ class Angularwebpage{
             })
         })
     }
+    CheckoutPage(){
+        cy.get('.nav-link.btn.btn-primary').contains('Checkout').click()
+    }
+    productvalidationincheckoutpage(){
+        cy.get('.media-body').each(($ele) =>{
+            cy.wrap($ele).should('contain.text','In Stock')
+        })
+    }
+    Checkoutbutton(){
+        cy.contains('Checkout').should('be.enabled').click()
+    }
+    Deliverylocation(){
+        cy.get('#country').should('be.visible').type('India')
+        cy.get('.suggestions',{timeout:10000}).click()
+    }
+    TermsandConditionsCheckbox(){
+        cy.get('#checkbox2').as('checkbox').should('not.be.selected').click({force:true})
+    }
+    Purchasebutton(){
+        cy.contains('Purchase').should('be.visible').click()
+    }
+    SuccessfullMessage(){
+        cy.get('.alert.alert-success.alert-dismissible').should('contain.text','Success! Thank you! Your order will be delivered in next few weeks :-).')
+    }
 }
 export default Angularwebpage
