@@ -32,7 +32,7 @@ class Angularwebpage{
     }
     ProductSelection(productnames) {
         cy.get('.card.h-100').each(($ele) => {
-            let products = $ele.text().trim();  // Get the product name (as a string) and trim any extra spaces
+            let products = $ele.text().trim();  
             productnames.forEach((name) => {    // Loop over the productnames array and check if any of the names are included in the products string
                 if (products.includes(name)) {
                     cy.wrap($ele).find('button').should('be.enabled').contains('Add').click()
