@@ -64,5 +64,17 @@ class Angularwebpage{
     SuccessfullMessage(){
         cy.get('.alert.alert-success.alert-dismissible').should('contain.text','Success! Thank you! Your order will be delivered in next few weeks :-).')
     }
+    TermsandConditionsurl(){
+        cy.get('.checkbox.checkbox-primary').find('a').should('be.visible').click()
+    }
+    TermsandConditionsPrompt(){
+        cy.get('.nsm-dialog-animation-fade').should('be.visible').and('contain.text','Terms And Conditions')
+    }
+    TermsandConditionsclosebutton(){
+        cy.contains('Close').should('be.visible').should('be.visible').click()
+    }
+    TermsandConditionsXbutton(){
+        cy.xpath("//button[@aria-label='Close']").should('be.visible').click()
+    }
 }
 export default Angularwebpage

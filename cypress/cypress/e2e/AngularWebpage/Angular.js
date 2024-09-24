@@ -57,6 +57,19 @@ When('I click on purchase option',()=>{
 Then('I validate the successful message',()=>{
     AngularwebpagePOM.SuccessfullMessage()
 })
+When('I click on Terms and Conditions link',()=>{
+    AngularwebpagePOM.TermsandConditionsurl()
+})
+Then('Validate the Terms and Conditions prompt',()=>{
+    AngularwebpagePOM.TermsandConditionsPrompt()
+})
+When('I Validate the close button',()=>{
+    AngularwebpagePOM.TermsandConditionsclosebutton()
+})
+When('I Validate the X button',()=>{
+    AngularwebpagePOM.TermsandConditionsXbutton()
+})
+
 
 
 

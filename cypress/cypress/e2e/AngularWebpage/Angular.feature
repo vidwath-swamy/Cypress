@@ -17,7 +17,7 @@ Feature: Sample Login
     |Vidwath    |vidwath@xyz.com     |sample2       |Male         |Employed    |1992-04-14   |
 
 
-@focus
+
     Scenario: Validate adding a product and checking out 
     Given I visit the Angular webpage
     And I navigate to the shop page
@@ -30,7 +30,16 @@ Feature: Sample Login
     And I click on purchase option
     Then I validate the successful message
 
-
-   # @regression
-  #  Scenario: Test fail
-  #  Given I fail Test
+@focus
+    Scenario: Validate the Terms and Conditions flow
+    Given I visit the Angular webpage
+    And I navigate to the shop page
+    And I select these products
+    And I navigate to the checkout page
+    And I validate the products in the cart
+    And I click on checkout
+    And I click on Terms and Conditions link
+    Then Validate the Terms and Conditions prompt
+    And I Validate the close button
+    And I click on Terms and Conditions link
+    And I Validate the X button
