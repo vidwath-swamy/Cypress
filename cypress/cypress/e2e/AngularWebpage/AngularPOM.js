@@ -51,9 +51,16 @@ class Angularwebpage{
     Checkoutbutton(){
         cy.contains('Checkout').should('be.enabled').click()
     }
-    Deliverylocation(){
-        cy.get('#country').should('be.visible').type('India')
-        cy.get('.suggestions',{timeout:10000}).click()
+    Deliverylocation() {
+        cy.get('#country', { timeout: 20000 })
+            .should('be.visible')
+            .type('India');
+    
+        // Wait for the suggestions to appear
+        cy.get('.suggestions', { timeout: 20000 }).should('be.visible').as('suggestions');
+    
+        // Click on the first suggestion
+        cy.get('@suggestions').first().click();
     }
     TermsandConditionsCheckbox(){
         cy.get('#checkbox2').as('checkbox').should('not.be.selected').click({force:true})

@@ -30,7 +30,7 @@ Feature: Sample Login
     And I click on purchase option
     Then I validate the successful message
 
-@focus
+
     Scenario: Validate the Terms and Conditions flow
     Given I visit the Angular webpage
     And I navigate to the shop page
@@ -43,3 +43,4 @@ Feature: Sample Login
     And I Validate the close button
     And I click on Terms and Conditions link
     And I Validate the X button
+    Then i do thos

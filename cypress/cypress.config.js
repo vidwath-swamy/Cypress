@@ -14,6 +14,7 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   projectId: 'TEST',
+  defaultCommandTimeout:10000,
   e2e: {
     setupNodeEvents,
     specPattern: '**/*.{feature,features}',
@@ -23,21 +24,21 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
-      charts: false,  // Disable charts for cleaner data
-      reportPageTitle: 'Test Report',  // Set a clean title for the report
-      embeddedScreenshots: true,  // Embed screenshots in the report
-      screenshotOnRunFailure:true,
-      inlineAssets: true,  // Embed CSS/JS for a standalone report without external dependencies
-      saveAllAttempts: false,  // Do not show multiple retry attempts, just the final result
-      overwrite: true,  // Overwrite existing reports for simplicity
-      showPassed: true,  // Show only the necessary steps (Given, When, Then)
-      showFailed: true,  // Only show failed tests if they exist
-      showPending: false,  // Hide pending tests
-      showSkipped: false,  // Hide skipped tests
-      reportDir: 'cypress/reports',  // Store the reports in a dedicated folder
-      debug: false,  // Disable debug info in the 
-      screenshotsFolder: 'cypress/screenshots',
-  },
+      charts: false,
+      reportPageTitle: 'Test Report',
+      embeddedScreenshots: true, // Ensure this is true
+      screenshotOnRunFailure: true, // This will handle failed tests
+      screenshotsFolder: "C:/Users/user/Documents/CypressReporttest/cypress/cypress/screenshots",
+      inlineAssets: true,
+      saveAllAttempts: false,
+      overwrite: true,
+      showPassed: true, // This will ensure passed tests show up in the report
+      showFailed: true,
+      showPending: false,
+      showSkipped: false,
+      reportDir: 'cypress/reports',
+      debug: false,
+    },
   },
   experimentalStudio:true,
 
