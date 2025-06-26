@@ -1,5 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1561","I login to this webpage and validate a successful record creation (example #2)","","Wed Jun 25 19:34:45 IST 2025","passed","Wed Jun 25 19:34:46 IST 2025","","Sample Login","",""
-"","12776","Validate the Terms and Conditions flow","","Wed Jun 25 19:34:46 IST 2025","failed","Wed Jun 25 19:34:59 IST 2025","","Sample Login","",""
-"","6687","Validate adding a product and checking out","","Wed Jun 25 19:34:59 IST 2025","passed","Wed Jun 25 19:35:06 IST 2025","","Sample Login","",""
-"","1852","I login to this webpage and validate a successful record creation (example #1)","","Wed Jun 25 19:34:43 IST 2025","passed","Wed Jun 25 19:34:45 IST 2025","","Sample Login","",""
