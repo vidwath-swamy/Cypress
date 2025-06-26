@@ -1,0 +1,31 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Start-Execution": "npx cypress run --env allure=true",
+    "Create-Allure-report-assets": "npx allure generate allure-results --clean -o allure-report",
+    "Generate-HTML-Report": "allure generate --single-file allure-results --clean",
+    "Clear-Allure-Results": "rimraf allure-results"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Vidhu",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.14.5",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "cucumber": "^6.0.7",
+    "cypress": "^13.14.1",
+    "nyc": "^17.1.0",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
